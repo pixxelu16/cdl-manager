@@ -10,7 +10,7 @@
         <title>Amdin Dashboard</title>
 		
 		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/admin.img/favicon.png') }}">
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/admin/img/favicon.png') }}">
 		
 		<!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{{ asset('public/admin/css/bootstrap.min.css') }}">
@@ -899,7 +899,7 @@
 									<h4 class="card-title">Today Absent <span class="badge bg-inverse-danger ms-2">5</span></h4>
 									<div class="leave-info-box">
 										<div class="media d-flex align-items-center">
-											<a href="profile.html" class="avatar"><img src="assets/img/user.jpg" alt="User Image"></a>
+											<a href="profile.html" class="avatar"><img src="{{ asset('public/admin/img/user.jpg') }}" alt="User Image"></a>
 											<div class="media-body flex-grow-1">
 												<div class="text-sm my-0">Martin Lewis</div>
 											</div>
@@ -916,7 +916,7 @@
 									</div>
 									<div class="leave-info-box">
 										<div class="media d-flex align-items-center">
-											<a href="profile.html" class="avatar"><img src="assets/img/user.jpg" alt="User Image"></a>
+											<a href="profile.html" class="avatar"><img src="{{ asset('public/admin/img/user.jpg') }}" alt="User Image"></a>
 											<div class="media-body flex-grow-1">
 												<div class="text-sm my-0">Martin Lewis</div>
 											</div>
@@ -1078,7 +1078,7 @@
 												<tr>
 													<td>
 														<h2 class="table-avatar">
-															<a href="#" class="avatar"><img src="assets/img/profiles/avatar-19.jpg" alt="User Image"></a>
+															<a href="#" class="avatar"><img src="{{ asset('public/admin/img/profiles/avatar-19.jpg') }}" alt="User Image"></a>
 															<a href="client-profile.html">Barry Cuda <span>CEO</span></a>
 														</h2>
 													</td>
@@ -1107,7 +1107,7 @@
 												<tr>
 													<td>
 														<h2 class="table-avatar">
-															<a href="#" class="avatar"><img src="assets/img/profiles/avatar-19.jpg" alt="User Image"></a>
+															<a href="#" class="avatar"><img src="{{ asset('public/admin/img/profiles/avatar-19.jpg') }}" alt="User Image"></a>
 															<a href="client-profile.html">Tressa Wexler <span>Manager</span></a>
 														</h2>
 													</td>
@@ -1136,7 +1136,7 @@
 												<tr>
 													<td>
 														<h2 class="table-avatar">
-															<a href="client-profile.html" class="avatar"><img src="assets/img/profiles/avatar-07.jpg" alt="User Image"></a>
+															<a href="client-profile.html" class="avatar"><img src="{{ asset('public/admin/img/profiles/avatar-07.jpg') }}" alt="User Image"></a>
 															<a href="client-profile.html">Ruby Bartlett <span>CEO</span></a>
 														</h2>
 													</td>
@@ -1165,7 +1165,7 @@
 												<tr>
 													<td>
 														<h2 class="table-avatar">
-															<a href="client-profile.html" class="avatar"><img src="assets/img/profiles/avatar-06.jpg" alt="User Image"></a>
+															<a href="client-profile.html" class="avatar"><img src="{{ asset('public/admin/img/profiles/avatar-06.jpg') }}" alt="User Image"></a>
 															<a href="client-profile.html"> Misty Tison <span>CEO</span></a>
 														</h2>
 													</td>
@@ -1194,7 +1194,7 @@
 												<tr>
 													<td>
 														<h2 class="table-avatar">
-															<a href="client-profile.html" class="avatar"><img src="assets/img/profiles/avatar-14.jpg" alt="User Image"></a>
+															<a href="client-profile.html" class="avatar"><img src="{{ asset('public/adminimg/profiles/avatar-14.jpg') }}" alt="User Image"></a>
 															<a href="client-profile.html"> Daniel Deacon <span>CEO</span></a>
 														</h2>
 													</td>
@@ -1391,7 +1391,7 @@
 					<h3>Customize your overview Page layout</h3>
 				</div>
 				<div class="sidebar-headerclose">
-					<a data-bs-dismiss="offcanvas" aria-label="Close"><img src="assets/img/close.png" alt="Close Icon"></a>
+					<a data-bs-dismiss="offcanvas" aria-label="Close"><img src="{{ asset('public/admin/img/close.png') }}" alt="Close Icon"></a>
 				</div>
 			</div>
 			<div class="offcanvas-body p-0"> 
@@ -1406,7 +1406,7 @@
 								<div class="form-check card-radio p-0"> 
 									<input id="customizer-layout01" name="data-layout" type="radio" value="vertical" class="form-check-input"> 
 									<label class="form-check-label avatar-md w-100" for="customizer-layout01"> 
-										<img src="assets/img/vertical.png" alt="Layout Image">
+										<img src="{{ asset('public/admin/img/vertical.png') }}" alt="Layout Image">
 									</label> 
 								</div> 
 								<h5 class="fs-13 text-center mt-2">Vertical</h5> 
@@ -1415,7 +1415,7 @@
 								<div class="form-check card-radio p-0"> 
 								<input id="customizer-layout02" name="data-layout" type="radio" value="horizontal" class="form-check-input"> 
 									<label class="form-check-label  avatar-md w-100" for="customizer-layout02"> 
-										<img src="assets/img/horizontal.png" alt="Layout Image">
+										<img src="{{ asset('public/admin/img/horizontal.png') }}" alt="Layout Image">
 									</label> 
 								</div> 
 								<h5 class="fs-13 text-center mt-2">Horizontal</h5> 
@@ -1424,7 +1424,7 @@
 								<div class="form-check card-radio p-0"> 
 									<input id="customizer-layout03" name="data-layout" type="radio" value="twocolumn" class="form-check-input"> 
 									<label class="form-check-label  avatar-md w-100" for="customizer-layout03"> 
-										<img src="assets/img/two-col.png" alt="Layout Image">
+										<img src="{{ asset('public/admin/img/two-col.png') }}" alt="Layout Image">
 									</label> 
 								</div> 
 								<h5 class="fs-13 text-center mt-2">Two Column</h5> 
@@ -1440,7 +1440,7 @@
 										<div class="form-check card-radio p-0"> 
 											<input class="form-check-input" type="radio" name="data-layout-mode" id="layout-mode-orange" value="orange"> 
 											<label class="form-check-label  avatar-md w-100 " for="layout-mode-orange"> 
-												<img src="assets/img/vertical.png" alt="Layout Image">
+												<img src="{{ asset('public/admin/img/vertical.png') }}" alt="Layout Image">
 										</label> 
 									</div> 
 									<h5 class="fs-13 text-center mt-2">Orange</h5> 
@@ -1449,7 +1449,7 @@
 									<div class="form-check card-radio p-0"> 
 										<input class="form-check-input" type="radio" name="data-layout-mode" id="layout-mode-light" value="light"> 
 										<label class="form-check-label  avatar-md w-100" for="layout-mode-light"> 
-											<img src="assets/img/vertical.png" alt="Layout Image">
+											<img src="{{ asset('public/admin/img/vertical.png') }}" alt="Layout Image">
 										</label> 
 									</div> 
 									<h5 class="fs-13 text-center mt-2">Light</h5> 
@@ -1458,7 +1458,7 @@
 									<div class="form-check card-radio dark  p-0 "> 
 										<input class="form-check-input" type="radio" name="data-layout-mode" id="layout-mode-dark" value="dark"> 
 										<label class="form-check-label avatar-md w-100 " for="layout-mode-dark"> 
-											<img src="assets/img/vertical.png" alt="Layout Image">
+											<img src="{{ asset('public/admin/img/vertical.png') }}" alt="Layout Image">
 										</label> 
 									</div> 
 									<h5 class="fs-13 text-center mt-2">Dark</h5> 
@@ -1467,7 +1467,7 @@
 									<div class="form-check card-radio blue  p-0 "> 
 										<input class="form-check-input" type="radio" name="data-layout-mode" id="layout-mode-blue" value="blue"> 
 										<label class="form-check-label  avatar-md w-100" for="layout-mode-blue"> 
-											<img src="assets/img/vertical.png" alt="Layout Image">
+											<img src="{{ asset('public/admin/img/vertical.png') }}" alt="Layout Image">
 										</label> 
 									</div> 
 									<h5 class="fs-13 text-center mt-2">Blue</h5> 
@@ -1476,7 +1476,7 @@
 									<div class="form-check card-radio maroon p-0"> 
 										<input class="form-check-input" type="radio" name="data-layout-mode" id="layout-mode-maroon" value="maroon"> 
 										<label class="form-check-label  avatar-md w-100 " for="layout-mode-maroon"> 
-											<img src="assets/img/vertical.png" alt="Layout Image">
+											<img src="{{ asset('public/admin/img/vertical.png') }}" alt="Layout Image">
 										</label> 
 									</div> 
 									<h5 class="fs-13 text-center mt-2">Maroon</h5> 
@@ -1485,7 +1485,7 @@
 									<div class="form-check card-radio purple p-0"> 
 										<input class="form-check-input" type="radio" name="data-layout-mode" id="layout-mode-purple" value="purple"> 
 										<label class="form-check-label  avatar-md w-100 " for="layout-mode-purple"> 
-											<img src="assets/img/vertical.png" alt="Layout Image">
+											<img src="{{ asset('public/admin/img/vertical.png') }}" alt="Layout Image">
 										</label> 
 									</div> 
 									<h5 class="fs-13 text-center mt-2">Purple</h5> 
@@ -1503,7 +1503,7 @@
 									<div class="form-check card-radio p-0"> 
 										<input class="form-check-input" type="radio" name="data-layout-width" id="layout-width-fluid" value="fluid"> 
 										<label class="form-check-label avatar-md w-100" for="layout-width-fluid"> 
-											<img src="assets/img/vertical.png" alt="Layout Image">
+											<img src="{{ asset('public/admin/img/vertical.png') }}" alt="Layout Image">
 										</label> 
 									</div> 
 									<h5 class="fs-13 text-center mt-2">Fluid</h5> 
@@ -1512,7 +1512,7 @@
 									<div class="form-check card-radio p-0 "> 
 										<input class="form-check-input" type="radio" name="data-layout-width" id="layout-width-boxed" value="boxed"> 
 										<label class="form-check-label avatar-md w-100 px-2" for="layout-width-boxed"> 
-											<img src="assets/img/boxed.png" alt="Layout Image"> 
+											<img src="{{ asset('public/admin/img/boxed.png') }}" alt="Layout Image"> 
 										</label> 
 									</div> 
 									<h5 class="fs-13 text-center mt-2">Boxed</h5> 
@@ -1542,7 +1542,7 @@
 								<div class="form-check card-radio  p-0"> 
 									<input class="form-check-input" type="radio" name="data-topbar" id="topbar-color-light" value="light"> 
 									<label class="form-check-label avatar-md w-100" for="topbar-color-light"> 
-										<img src="assets/img/vertical.png" alt="Layout Image">
+										<img src="{{ asset('public/admin/img/vertical.png') }}" alt="Layout Image">
 									</label> 
 								</div> 
 								<h5 class="fs-13 text-center mt-2">Light</h5> 
@@ -1551,7 +1551,7 @@
 								<div class="form-check card-radio p-0"> 
 									<input class="form-check-input" type="radio" name="data-topbar" id="topbar-color-dark" value="dark"> 
 									<label class="form-check-label  avatar-md w-100" for="topbar-color-dark"> 
-										<img src="assets/img/dark.png" alt="Layout Image">
+										<img src="{{ asset('public/admin/img/dark.png') }}" alt="Layout Image">
 									</label> 
 								</div> 
 								<h5 class="fs-13 text-center mt-2">Dark</h5> 
@@ -1568,7 +1568,7 @@
 									<div class="form-check sidebar-setting card-radio  p-0 "> 
 										<input class="form-check-input" type="radio" name="data-sidebar-size" id="sidebar-size-default" value="lg" > 
 										<label class="form-check-label avatar-md w-100" for="sidebar-size-default"> 
-											<img src="assets/img/vertical.png" alt="Layout Image">
+											<img src="{{ asset('public/admin/img/vertical.png') }}" alt="Layout Image">
 										</label> 
 									</div> 
 									<h5 class="fs-13 text-center mt-2">Default</h5> 
@@ -1578,7 +1578,7 @@
 									<div class="form-check sidebar-setting card-radio p-0"> 
 										<input class="form-check-input" type="radio" name="data-sidebar-size" id="sidebar-size-compact" value="md"> 
 										<label class="form-check-label  avatar-md w-100" for="sidebar-size-compact"> 
-											<img src="assets/img/compact.png" alt="Layout Image">
+											<img src="{{ asset('public/admin/img/compact.png') }}" alt="Layout Image">
 										</label> 
 									</div> 
 									<h5 class="fs-13 text-center mt-2">Compact</h5> 
@@ -1588,7 +1588,7 @@
 									<div class="form-check sidebar-setting card-radio p-0 "> 
 										<input class="form-check-input" type="radio" name="data-sidebar-size" id="sidebar-size-small-hover" value="sm-hover" > 
 										<label class="form-check-label avatar-md w-100" for="sidebar-size-small-hover"> 
-											<img src="assets/img/small-hover.png" alt="Layout Image">
+											<img src="{{ asset('public/admin/img/small-hover.png') }}" alt="Layout Image">
 										</label> 
 									</div> 
 									<h5 class="fs-13 text-center mt-2">Small Hover View</h5> 
@@ -1606,7 +1606,7 @@
 									<div class="form-check sidebar-setting card-radio  p-0"> 
 										<input class="form-check-input" type="radio" name="data-layout-style" id="sidebar-view-default" value="default"> 
 										<label class="form-check-label avatar-md w-100" for="sidebar-view-default"> 
-											<img src="assets/img/compact.png" alt="Layout Image">
+											<img src="{{ asset('public/admin/img/compact.png') }}" alt="Layout Image">
 										</label>
 										</div> 
 									<h5 class="fs-13 text-center mt-2">Default</h5> 
@@ -1615,7 +1615,7 @@
 									<div class="form-check sidebar-setting card-radio p-0"> 
 										<input class="form-check-input" type="radio" name="data-layout-style" id="sidebar-view-detached" value="detached"> 
 										<label class="form-check-label  avatar-md w-100" for="sidebar-view-detached"> 
-											<img src="assets/img/detached.png" alt="Layout Image">
+											<img src="{{ asset('public/admin/img/detached.png') }}" alt="Layout Image">
 										</label> 
 									</div> 
 									<h5 class="fs-13 text-center mt-2">Detached</h5> 
