@@ -1194,7 +1194,7 @@
 												<tr>
 													<td>
 														<h2 class="table-avatar">
-															<a href="client-profile.html" class="avatar"><img src="{{ asset('public/adminimg/profiles/avatar-14.jpg') }}" alt="User Image"></a>
+															<a href="client-profile.html" class="avatar"><img src="{{ asset('public/admin/img/profiles/avatar-14.jpg') }}" alt="User Image"></a>
 															<a href="client-profile.html"> Daniel Deacon <span>CEO</span></a>
 														</h2>
 													</td>
