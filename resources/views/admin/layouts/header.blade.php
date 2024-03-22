@@ -1,10 +1,10 @@
 <!-- Logo -->
     <div class="header-left">
             <a href="admin-dashboard.html" class="logo">
-            <img src="assets/img/logo.png" width="40" height="40" alt="Logo">
+            <img src="{{ asset('public/admin/img/logo.png') }}" width="40" height="40" alt="Logo">
         </a>
         <a href="admin-dashboard.html" class="logo2">
-            <img src="assets/img/logo2.png" width="40" height="40" alt="Logo">
+            <img src="{{ asset('public/admin/img/logo2.png') }}" width="40" height="40" alt="Logo">
         </a>
     </div>
     <!-- /Logo -->
@@ -45,20 +45,20 @@
         <!-- Flag -->
         <li class="nav-item dropdown has-arrow flag-nav">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">
-                <img src="assets/img/flags/us.png" alt="Flag" height="20"> <span>English</span>
+                <img src="{{ asset('public/admin/img/flags/us.png') }}" alt="Flag" height="20"> <span>English</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <a href="javascript:void(0);" class="dropdown-item">
-                    <img src="assets/img/flags/us.png" alt="Flag" height="16"> English
+                    <img src="{{ asset('public/admin/img/flags/us.png') }}" alt="Flag" height="16"> English
                 </a>
                 <a href="javascript:void(0);" class="dropdown-item">
-                    <img src="assets/img/flags/fr.png" alt="Flag" height="16"> French
+                    <img src="{{ asset('public/admin/img/flags/fr.png') }}" alt="Flag" height="16"> French
                 </a>
                 <a href="javascript:void(0);" class="dropdown-item">
-                    <img src="assets/img/flags/es.png" alt="Flag" height="16"> Spanish
+                    <img src="{{ asset('public/admin/img/flags/es.png') }}" alt="Flag" height="16"> Spanish
                 </a>
                 <a href="javascript:void(0);" class="dropdown-item">
-                    <img src="assets/img/flags/de.png" alt="Flag" height="16"> German
+                    <img src="{{ asset('public/admin/img/flags/de.png') }}" alt="Flag" height="16"> German
                 </a>
             </div>
         </li>
@@ -80,7 +80,7 @@
                             <a href="activities.html">
                                 <div class="chat-block d-flex">
                                     <span class="avatar flex-shrink-0">
-                                        <img src="assets/img/profiles/avatar-02.jpg" alt="User Image">
+                                        <img src="{{ asset('public/admin/img/profiles/avatar-02.jpg') }}" alt="User Image">
                                     </span>
                                     <div class="media-body flex-grow-1">
                                         <p class="noti-details"><span class="noti-title">John Doe</span> added new task <span class="noti-title">Patient appointment booking</span></p>
@@ -93,7 +93,7 @@
                             <a href="activities.html">
                                 <div class="chat-block d-flex">
                                     <span class="avatar flex-shrink-0">
-                                        <img src="assets/img/profiles/avatar-03.jpg" alt="User Image">
+                                        <img src="{{ asset('public/admin/img/profiles/avatar-03.jpg') }}" alt="User Image">
                                     </span>
                                     <div class="media-body flex-grow-1">
                                         <p class="noti-details"><span class="noti-title">Tarah Shropshire</span> changed the task name <span class="noti-title">Appointment booking with payment gateway</span></p>
@@ -106,7 +106,7 @@
                             <a href="activities.html">
                                 <div class="chat-block d-flex">
                                     <span class="avatar flex-shrink-0">
-                                        <img src="assets/img/profiles/avatar-06.jpg" alt="User Image">
+                                        <img src="{{ asset('public/admin/img/profiles/avatar-06.jpg') }}" alt="User Image">
                                     </span>
                                     <div class="media-body flex-grow-1">
                                         <p class="noti-details"><span class="noti-title">Misty Tison</span> added <span class="noti-title">Domenic Houston</span> and <span class="noti-title">Claire Mapes</span> to project <span class="noti-title">Doctor available module</span></p>
@@ -119,7 +119,7 @@
                             <a href="activities.html">
                                 <div class="chat-block d-flex">
                                     <span class="avatar flex-shrink-0">
-                                        <img src="assets/img/profiles/avatar-17.jpg" alt="User Image">
+                                        <img src="{{ asset('public/admin/img/profiles/avatar-17.jpg') }}" alt="User Image">
                                     </span>
                                     <div class="media-body flex-grow-1">
                                         <p class="noti-details"><span class="noti-title">Rolland Webber</span> completed task <span class="noti-title">Patient and Doctor video conferencing</span></p>
@@ -132,7 +132,7 @@
                             <a href="activities.html">
                                 <div class="chat-block d-flex">
                                     <span class="avatar flex-shrink-0">
-                                        <img src="assets/img/profiles/avatar-13.jpg" alt="User Image">
+                                        <img src="{{ asset('public/admin/img/profiles/avatar-13.jpg') }}" alt="User Image">
                                     </span>
                                     <div class="media-body flex-grow-1">
                                         <p class="noti-details"><span class="noti-title">Bernardo Galaviz</span> added new task <span class="noti-title">Private chat module</span></p>
@@ -167,7 +167,7 @@
                                 <div class="list-item">
                                     <div class="list-left">
                                         <span class="avatar">
-                                            <img src="assets/img/profiles/avatar-09.jpg" alt="User Image">
+                                            <img src="{{ asset('public/admin/img/profiles/avatar-09.jpg') }}" alt="User Image">
                                         </span>
                                     </div>
                                     <div class="list-body">
@@ -184,7 +184,7 @@
                                 <div class="list-item">
                                     <div class="list-left">
                                         <span class="avatar">
-                                            <img src="assets/img/profiles/avatar-02.jpg" alt="User Image">
+                                            <img src="{{ asset('public/admin/img/profiles/avatar-02.jpg') }}" alt="User Image">
                                         </span>
                                     </div>
                                     <div class="list-body">
@@ -201,7 +201,7 @@
                                 <div class="list-item">
                                     <div class="list-left">
                                         <span class="avatar">
-                                            <img src="assets/img/profiles/avatar-03.jpg" alt="User Image">
+                                            <img src="{{ asset('public/admin/img/profiles/avatar-03.jpg') }}" alt="User Image">
                                         </span>
                                     </div>
                                     <div class="list-body">
@@ -218,7 +218,7 @@
                                 <div class="list-item">
                                     <div class="list-left">
                                         <span class="avatar">
-                                            <img src="assets/img/profiles/avatar-05.jpg" alt="User Image">
+                                            <img src="{{ asset('public/admin/img/profiles/avatar-05.jpg') }}" alt="User Image">
                                         </span>
                                     </div>
                                     <div class="list-body">
@@ -235,7 +235,7 @@
                                 <div class="list-item">
                                     <div class="list-left">
                                         <span class="avatar">
-                                            <img src="assets/img/profiles/avatar-08.jpg" alt="User Image">
+                                            <img src="{{ asset('public/admin/img/profiles/avatar-08.jpg') }}" alt="User Image">
                                         </span>
                                     </div>
                                     <div class="list-body">
@@ -258,7 +258,7 @@
 
         <li class="nav-item dropdown has-arrow main-drop">
             <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
-                <span class="user-img"><img src="assets/img/profiles/avatar-21.jpg" alt="User Image">
+                <span class="user-img"><img src="{{ asset('public/admin/img/profiles/avatar-21.jpg') }}" alt="User Image">
                 <span class="status online"></span></span>
                 <span>Admin</span>
             </a>
