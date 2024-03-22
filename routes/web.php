@@ -17,10 +17,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+//Commin Route End
+Route::group(['middleware' => 'auth'], function(){ 
+    //Admin Only 
+    Route::group(['middleware' => 'admin'], function(){ 
+        Route::get('admin/dashboard','App\Http\Controllers\Admin\DashboardController@dashboard');
+    });
+    
+    //Customer Only 
+    Route::group(['middleware' => 'customer'], function(){
+        Route::get('customer/dashboard','App\Http\Controllers\Customer\DashboardController@dashboard'); 
+    });
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
