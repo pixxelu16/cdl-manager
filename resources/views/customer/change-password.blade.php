@@ -11,7 +11,7 @@
 <div class="profile-row">
    <div class="container">
       <div class="profile-row-header">
-         <a href="#" class="back-buton"><img src="{{ asset('public/assets/images/back.png') }}"></a>         
+         <a href="{{ url('customer/dashboard') }}" class="back-buton"><img src="{{ asset('public/assets/images/back.png') }}"></a>         
          <h2>Change Password</h2>
          @if (Session::has('success')) 
          <div class="notifaction-green">
@@ -31,13 +31,13 @@
       <form action="{{ route('update.password') }}" Method="POST">
         @csrf
          <div class="edit-row-input">
-            <input type="text" id="current_password" name="current_password" placeholder="Current Password" />
+            <input type="password" id="current_password" name="current_password" placeholder="Current Password" required/>
          </div>
          <div class="edit-row-input">
-            <input type="text" id="password "name="password" placeholder="New Password" />
+            <input type="password" id="password "name="password" placeholder="New Password" required/>
          </div>
          <div class="edit-row-input">
-            <input type="text" id="confirm_password" name="confirm_password" placeholder="Confirm Password" />
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required/>
          </div>
          <div class="edit-row-input">
             <button type="submit" name="submit">Update</button>
