@@ -26,7 +26,11 @@ Route::group(['middleware' => 'auth'], function(){
     
     //Customer Only 
     Route::group(['middleware' => 'customer'], function(){
-        Route::get('customer/dashboard','App\Http\Controllers\Customer\DashboardController@dashboard'); 
+        Route::get('customer/dashboard','App\Http\Controllers\Customer\DashboardController@dashboard');
+        Route::get('edit-profile/{id}','App\Http\Controllers\Customer\DashboardController@edit_profile');
+        Route::post('update-profile/{id}','App\Http\Controllers\Customer\DashboardController@update_profile')->name('profile.update');
+        Route::get('change-password','App\Http\Controllers\Customer\DashboardController@change_password');
+        Route::post('update-password','App\Http\Controllers\Customer\DashboardController@submit_change_password')->name('update.password');      
     });
 });
 Auth::routes();

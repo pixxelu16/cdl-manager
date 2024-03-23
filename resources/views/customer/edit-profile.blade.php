@@ -1,43 +1,57 @@
 @extends('layouts.master')
 @section('content')
+<style>
+   .notifaction-green {
+   color: green;
+   }
+   .notification-red {
+   color: red;
+   }
+</style>
 <div class="profile-row">
    <div class="container">
       <div class="profile-row-header">
-         <h2>Profile</h2>
+         <a href="#" class="back-buton"><img src="{{ asset('public/assets/images/back.png') }}"></a>
+         @if (Session::has('success')) 
+         <div class="notifaction-green">
+            <p>{{ Session::get('success') }}</p>
+         </div>
+         @endif 
+         @if (Session::has('unsuccess')) 
+         <div class="notifaction-red">
+            <p> {{ Session::get('unsuccess') }}</p>
+         </div>
+         @endif 
+         <h2>Edit Profile</h2>
       </div>
       <div class="profile-icon">
          <div class="profile-bx-inner">
             <img src="{{ asset('public/assets/images/user.png') }}">
+            <button class="edite-buton"><img src="{{ asset('public/assets/images/edit-text.png') }}"></button>
          </div>
-         <span>{{ $user->name }}</span>
-         <em>Azim Cargo Driver</em>
       </div>
    </div>
 </div>
-<div class="profile-list-li">
+<div class="edit-profile-form">
    <div class="container">
-      <ul>
-         <li class="list-errow"><a href="{{ url('edit-profile', $user->id) }}">Edit Profile</a></li>
-         <li class="list-errow"><a href="{{ url('change-password') }}">Change Password</a></li>
-         <li class="list-errow"><a href="#">Terms & Conditions</a></li>
-         <li class="list-errow"><a href="#">Privacy & Policy</a></li>
-         <li class="notifiction-li">
-            <a href="#">
-               Push Notifications
-               <div class="on-off"><input type="checkbox" value="1" class="switch"></div>
-            </a>
-         </li>
-         <li class="logout-li">
-            <a class="dropdown-item" href="{{ route('logout') }}"
-               onclick="event.preventDefault();
-               document.getElementById('logout-form').submit();">
-            {{ __('Logout') }}
-            </a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-               @csrf
-            </form>
-         </li>
-      </ul>
+      <form action="{{ route('profile.update', $profiles->id) }}" Method="POST">
+         @csrf
+         <div class="edit-row-input">
+            <input type="text" name="email" value="{{$profiles->email}}"placeholder="Email Address" disabled />
+         </div>
+         <div class="edit-row-input">
+            <input type="text" name="name" value="{{$profiles->name}}" placeholder="Full Name" />
+         </div>
+         <div class="edit-row-input">
+            <input type="text" name="company" value="{{$profiles->company}}" placeholder="Company" />
+         </div>
+         <div class="edit-row-input">
+            <input type="text" name="dot_number" value="{{$profiles->dot_number}}" placeholder="Dot Number" />
+         </div>
+         <div class="edit-row-input">
+            <button type="submit" name="submit">Update</button>
+         </div>
+      </form>
    </div>
 </div>
 <div class="button-bottom-saction">

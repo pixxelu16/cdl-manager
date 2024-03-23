@@ -23,6 +23,8 @@ class User extends Authenticatable
         'password',
         'first_name',
         'last_name',
+        'company',
+        'dot_number',
         'gender',
         'state',
         'country',
