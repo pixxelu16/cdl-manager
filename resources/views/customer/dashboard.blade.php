@@ -10,15 +10,15 @@
             <img src="{{ asset('public/assets/images/user.png') }}">
          </div>
          <span>{{ $user->name }}</span>
-         <em>Azim Cargo Driver</em>
+         <em>{{ $user->company }}</em>
       </div>
    </div>
 </div>
 <div class="profile-list-li">
    <div class="container">
       <ul>
-         <li class="list-errow"><a href="{{ url('edit-profile', $user->id) }}">Edit Profile</a></li>
-         <li class="list-errow"><a href="{{ url('change-password') }}">Change Password</a></li>
+         <li class="list-errow"><a href="{{ url('customer/edit-profile', $user->id) }}">Edit Profile</a></li>
+         <li class="list-errow"><a href="{{ url('customer/change-password') }}">Change Password</a></li>
          <li class="list-errow"><a href="#">Terms & Conditions</a></li>
          <li class="list-errow"><a href="#">Privacy & Policy</a></li>
          <li class="notifiction-li">

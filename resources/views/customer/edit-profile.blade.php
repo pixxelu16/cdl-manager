@@ -1,17 +1,9 @@
 @extends('layouts.master')
 @section('content')
-<style>
-   .notifaction-green {
-   color: green;
-   }
-   .notification-red {
-   color: red;
-   }
-</style>
 <div class="profile-row">
    <div class="container">
       <div class="profile-row-header">
-         <a href="#" class="back-buton"><img src="{{ asset('public/assets/images/back.png') }}"></a>
+         <a href="{{ url('customer/dashboard') }}" class="back-buton"><img src="{{ asset('public/assets/images/back.png') }}"></a>
          @if (Session::has('success')) 
          <div class="notifaction-green">
             <p>{{ Session::get('success') }}</p>
@@ -37,7 +29,7 @@
       <form action="{{ route('profile.update', $profiles->id) }}" Method="POST">
          @csrf
          <div class="edit-row-input">
-            <input type="text" name="email" value="{{$profiles->email}}"placeholder="Email Address" disabled />
+            <input type="text" name="email" value="{{$profiles->email}}" placeholder="Email Address" disabled />
          </div>
          <div class="edit-row-input">
             <input type="text" name="name" value="{{$profiles->name}}" placeholder="Full Name" />
