@@ -13,9 +13,9 @@
    <div class="container">
       <div class="button-menu">
          <ul>
-            <li><a href="#"><img src="{{ asset('public/assets/images/icon-1.png') }}"></a></li>
-            <li><a href="#"><img src="{{ asset('public/assets/images/icon-2.png') }}"></a></li>
-            <li><a href="#"><img src="{{ asset('public/assets/images/icon-3.png') }}"></a></li>
+            <li><a href="{{ url('customer/conversation') }}"><img src="{{ asset('public/assets/images/icon-1.png') }}"></a></li>
+            <li><a href="{{ url('customer/contact') }}"><img src="{{ asset('public/assets/images/icon-2.png') }}"></a></li>
+            <li><a href="{{ url('customer/dashboard') }}"><img src="{{ asset('public/assets/images/icon-3.png') }}"></a></li>
          </ul>
       </div>
    </div>

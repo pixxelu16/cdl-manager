@@ -16,14 +16,14 @@
       <div class="conversations-list-li">
          <ul>
             <li>
-               <a href="#">
+               <a href="{{ url('customer/cdlm') }}">
                   <div class="list-user-img"><img src="{{ asset('public/assets/images/user.png') }}"></div>
                   <div class="list-user-text"><span>CDLM</span> <em>this works thanks</em></div>
                   <div class="list-user-ago"><em>4 years ago</em></div>
                </a>
             </li>
             <li>
-               <a href="#">
+               <a href="{{ url('customer/cdlm') }}">
                   <div class="list-user-img"><img src="{{ asset('public/assets/images/user.png') }}"></div>
                   <div class="list-user-text"><span>CDLM</span> <em>this works thanks</em></div>
                   <div class="list-user-ago"><em>4 years ago</em></div>

@@ -32,7 +32,8 @@ Route::group(['middleware' => 'auth'], function(){
         Route::get('customer/change-password','App\Http\Controllers\Customer\DashboardController@change_password');
         Route::post('customer/update-password','App\Http\Controllers\Customer\DashboardController@submit_change_password')->name('update.password');
         Route::get('customer/conversation','App\Http\Controllers\Customer\DashboardController@conversations'); 
-        Route::get('customer/contact','App\Http\Controllers\Customer\DashboardController@contacts');        
+        Route::get('customer/contact','App\Http\Controllers\Customer\DashboardController@contacts');
+        Route::get('customer/cdlm','App\Http\Controllers\Customer\DashboardController@cdlm');        
     });
 });
 Auth::routes();
