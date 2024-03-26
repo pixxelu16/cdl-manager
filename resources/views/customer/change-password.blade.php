@@ -3,9 +3,13 @@
 <style>
    .notifaction-green {
    color: green;
+   text-align: center;
+   font-size: 20px;
    }
-   .notification-red {
+   .notifaction-red {
+   text-align: center;
    color: red;
+   font-size: 20px;
    }
 </style>
 <div class="profile-row">
@@ -15,21 +19,21 @@
          <h2>Change Password</h2>
          @if (Session::has('success')) 
          <div class="notifaction-green">
-            <p>{{ Session::get('success') }}</p>
+            <p2>{{ Session::get('success') }}</p2>
          </div>
          @endif 
          @if (Session::has('unsuccess')) 
          <div class="notifaction-red">
-            <p> {{ Session::get('unsuccess') }}</p>
+            <p2> {{ Session::get('unsuccess') }}</p2>
          </div>
-         @endif 
+         @endif
       </div>
    </div>
 </div>
 <div class="edit-profile-form">
    <div class="container">
       <form action="{{ route('update.password') }}" Method="POST">
-        @csrf
+         @csrf
          <div class="edit-row-input">
             <input type="password" id="current_password" name="current_password" placeholder="Current Password" required/>
          </div>
@@ -45,26 +49,5 @@
       </form>
    </div>
 </div>
-<div class="button-bottom-saction">
-   <div class="button-bottom-tow-saction">
-      <div class="container">
-         <div class="button-menu-two">
-            <ul>
-               <li><a href="#"><img src="{{ asset('public/assets/images/icon-4.png') }}" class="green-icon"><img src="images/icon-4-blue.png') }}" class="blue-icon"><span>Conversations</span></a></li>
-               <li><a href="#"><img src="{{ asset('public/assets/images/icon-5.png') }}" class="green-icon"><img src="{{ asset('public/assets/images/icon-5-blue.png') }}" class="blue-icon"><span>Contacts</span></a></li>
-               <li class="active"><a href="#"><img src="{{ asset('public/assets/images/user-1.png') }}" class="green-icon"><img src="{{ asset('public/assets/images/icon-6.png') }}" class="blue-icon"><span>Profile</span></a></li>
-            </ul>
-         </div>
-      </div>
-   </div>
-   <div class="container">
-      <div class="button-menu">
-         <ul>
-            <li><a href="#"><img src="{{ asset('public/assets/images/icon-1.png') }}"></a></li>
-            <li><a href="#"><img src="{{ asset('public/assets/images/icon-2.png') }}"></a></li>
-            <li><a href="#"><img src="{{ asset('public/assets/images/icon-3.png') }}"></a></li>
-         </ul>
-      </div>
-   </div>
-</div>
+@include('customer.footer')
 @endsection

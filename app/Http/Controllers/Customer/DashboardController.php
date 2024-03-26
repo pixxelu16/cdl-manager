@@ -18,6 +18,16 @@ class DashboardController extends Controller
     $user = User::find($login_user_id); 
         return view('customer.dashboard', compact('user'));
     }
+
+    //Function for conservations
+    public function conversations(){
+        return view('customer.conversations');
+    }
+
+    //Function for contact
+    public function contacts(){
+        return view('customer.contact');
+    }
     
     //Function for edit profile
     public function edit_profile($id){
@@ -49,7 +59,7 @@ class DashboardController extends Controller
 
     //Function for show customer change password page
     public function submit_change_password(Request $request){
-        //echo "yes";exit;
+        //check auth login detail
         $user = Auth::user();
         if (!Hash::check($request->current_password, $user->password)) {
             return redirect()->back()->with('unsuccess', 'Your current password does not match with the password you provided.');
@@ -60,5 +70,5 @@ class DashboardController extends Controller
 
         return redirect()->back()->with('success', 'Your password has been changed successfully.');
     }
-    
 }
+
