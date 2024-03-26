@@ -28,6 +28,11 @@ class DashboardController extends Controller
     public function contacts(){
         return view('customer.contact');
     }
+
+    //Function for CDLM
+    public function cdlm(){
+        return view('customer.cdlm');
+    }
     
     //Function for edit profile
     public function edit_profile($id){
@@ -37,7 +42,6 @@ class DashboardController extends Controller
 
     //Function for update profile
     public function update_profile(Request $request, $id){
-    //echo "yes"; exit;
     //update user profile
     $update_profile = User::where('id', $id)->update([
         'name' => $request->name,
