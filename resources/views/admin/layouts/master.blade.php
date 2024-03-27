@@ -49,6 +49,10 @@
 			
 			@yield('content')
 
+		<script>
+        var base_url = '{{ url("/admin") }}'; 
+			</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<!-- jQuery -->
        <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
        <script src="{{ asset('public/admin/js/jquery-3.7.1.min.js') }}"></script>
@@ -74,7 +78,7 @@
 		
         <!-- Custom JS Custom-->
         <script src="{{ asset('public/admin/js/custom-ajax') }}"></script>
-        <script src="{{ asset('public/admin/js/custom-script') }}"></script>
+        <script src="{{ asset('public/admin/js/custom-script.js') }}"></script>
     </body>
 
 </html>

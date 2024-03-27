@@ -11586,5 +11586,19 @@ body[data-layout-mode=dark] .alertify .ajs-header {
   border: 1px solid #878A99;
   border-radius: 4px;
 }
-
 /*# sourceMappingURL=style.css.map */
+
+/* success and unsuccess massage show */
+.notifaction-green {
+  color: green;
+}
+  .notification-red {
+  color: red;
+}
+  .col-md-18.text-right {
+  margin: 5px;
+  text-align: right;
+}
+/* end success and unsuccess massage show */
+
+

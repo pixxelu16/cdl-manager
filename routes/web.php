@@ -22,6 +22,10 @@ Route::group(['middleware' => 'auth'], function(){
     //Admin Only 
     Route::group(['middleware' => 'admin'], function(){ 
         Route::get('admin/dashboard','App\Http\Controllers\Admin\DashboardController@dashboard');
+        Route::get('admin/all-users','App\Http\Controllers\Admin\UserManagementController@all_user_list');
+        Route::get('admin-edit-user/{id}','App\Http\Controllers\Admin\UserManagementController@edit_user'); 
+        Route::post('admin/update-user/{id}','App\Http\Controllers\Admin\UserManagementController@update_user')->name('admin.update.user');
+        Route::get('admin-delete-user/{id}','App\Http\Controllers\Admin\UserManagementController@delete_user'); 
     });
     
     //Customer Only 
