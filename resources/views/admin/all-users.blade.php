@@ -2,6 +2,13 @@
 @section('content')
 <div class="page-wrapper">
    <div class="content container-fluid">
+      <div class="page-header">
+         <div class="row align-items-center">
+            <div class="col">
+               <h3 class="page-title">All Customer Users List</h3>
+            </div>
+         </div>
+      </div>
       @if (Session::has('success')) 
       <div class="notifaction-green">
          <p>{{ Session::get('success') }}</p>
@@ -15,7 +22,7 @@
       <div class="row">
          <div class="col-md-12">
             <div class="table-responsive">
-               <table class="table table-striped custom-table datatable">
+               <table id="DataTables_Table_0" class="table table-striped custom-table datatable">
                   <thead>
                      <tr>
                         <th>Name</th>
