@@ -79,39 +79,41 @@ class AuthController extends Controller
         }
     }
 
-    //Function to get all user customer details
-    public function get_user_profile() {
-    $get_all_users = User::where('user_type', 'Customer')->get()->toArray();
-        //check if any user with type 'Customer' exists or noy
-        if (count($get_all_users) >= 1) {
-            $all_user_list = [];
-            foreach ($get_all_users as $user_detail) {
-                //get users record
-                $all_user_list[] = [
-                    'id' => $user_detail['id'],
-                    'name' => $user_detail['name'],
-                    'email' => $user_detail['email'],
-                    'dot_number' => $user_detail['dot_number'],
-                    'company' => $user_detail['company'],
-                    'created_at' => $user_detail['created_at'],
-                    'updated_at' => $user_detail['updated_at'],
-                ];
-            }
+    //Function to get a single customer's detail
+    public function get_single_user_profile(Request $request) {
+        //Get user id
+        $id = $request->id;
+        $user = User::where('user_type', 'Customer')->find($id);
+        // Check if the user exists
+        if ($user) {
+            //get user data
+            $user_detail = [
+                'id' => $user->id,
+                'name' => $user->name,
+                'email' => $user->email,
+                'dot_number' => $user->dot_number,
+                'company' => $user->company,
+                'created_at' => $user->created_at,
+                'updated_at' => $user->updated_at,
+            ];
+
             //get response
             $success['status'] = 200;
-            $success['message'] = "Customer users details get successfully.";
-            $success['data'] = $all_user_list; 
+            $success['message'] = "Customer user detail get successfully.";
+            $success['data'] = $user_detail; 
             return response()->json($success, 200);
         } else {
             $success['status'] = 400;
-            $success['message'] = "No customer users found.";
+            $success['message'] = "Opps something went wrong.";
             $success['data'] = []; 
             return response()->json($success, 400);
         }
     }
 
     //Function for user update profile
-    public function update_user_profile(Request $request, $id){
+    public function update_user_profile(Request $request) {
+    //Get user id
+    $id = $request->id;
     //update user profile
     $update_user = User::where('id', $id)->update([
         'name' => $request->name,
@@ -119,7 +121,7 @@ class AuthController extends Controller
         'company' => $request->company,
     ]);
         //check if user record is upate or not
-        if($update_user){
+        if($update_user) {
             $success['status'] = 200;
             $success['message'] = "Customer user detail updated successfully.";
             $success['data'] = []; 
@@ -132,40 +134,49 @@ class AuthController extends Controller
         }
     }
 
-    //Function for update password with email
+    //Function for updating password with user id
     public function updated_password(Request $request) {
         //validation
         $request->validate([
-            'email' => 'required|email',
-            'old_password' => 'required|min:6',
+            'id' => 'required|integer',
+            'current_password' => 'required|min:6',
             'new_password' => 'required|min:6',
-            'confirm_password' => 'required|same:new_password',
+            'confirm_password' => 'required|min:6',
         ]);
-        //Check if email is exit or not
-        $user = User::where('email', $request->email)->first();
-        //Check if the user exist or not
-        if ($user) {
-            //verify current password
-            if (Hash::check($request->old_password, $user->password)) {
-                //update the password
-                $user->password = Hash::make($request->new_password);
-                $user->update();
-                return response()->json([
-                    'status' => 'success',
-                    'message' => 'Password updated successfully.',
-                ], 200);
-            } else {
+        //get user id
+        $user = User::find($request->id);
+        //check if the user exists or not
+        if ($user) {      
+                    
+            //check if new password matches confirm password
+            if ($request->new_password !== $request->confirm_password) {
                 return response()->json([
                     'status' => 'error',
-                    'message' => 'Old password is incorrect.',
-                ], 401);
+                    'message' => 'New password and confirm password do not match.',
+                ], 400);
             }
+                //verify current password
+                if (Hash::check($request->current_password, $user->password)) {
+                    //update the password
+                    $user->password = Hash::make($request->new_password);
+                    $user->save();
+                    //response
+                    return response()->json([
+                        'status' => 'success',
+                        'message' => 'Password updated successfully.',
+                    ], 200);
+                } else {
+                    return response()->json([
+                        'status' => 'error',
+                        'message' => 'Old password is incorrect.',
+                    ], 400);
+                }    
         } else {
             return response()->json([
                 'status' => 'error',
                 'message' => 'User not found.',
-            ], 404);
-        }
+            ], 400);
+        } 
     }
 }
     
